@@ -39,3 +39,11 @@
     padding: 10px 10px;
     background-color: #fff;
 }
+
+.menu-cart button {
+    padding: 15px 50px;
+    font-size: 20px;
+    border: 0;
+    background-color: cadetblue;
+    border-radius: 5px;
+}

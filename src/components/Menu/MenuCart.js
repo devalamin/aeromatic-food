@@ -23,6 +23,7 @@ const MenuCart = () => {
                 <h4>Eating Time: </h4>
                 <h4>Break Time: </h4>
             </div>
+            <button>Completed</button>
 
 
 
