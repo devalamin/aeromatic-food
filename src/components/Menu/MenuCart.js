@@ -20,6 +20,8 @@ const MenuCart = () => {
             </div>
             <div className="details">
                 <h2>Processing</h2>
+                <h4>Eating Time: </h4>
+                <h4>Break Time: </h4>
             </div>
 
 

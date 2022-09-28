@@ -34,3 +34,8 @@
 .details {
     text-align: start;
 }
+
+.details h4 {
+    padding: 10px 10px;
+    background-color: #fff;
+}
