@@ -1,0 +1,36 @@
+.menu-cart {
+    position: sticky;
+    top: 0;
+    padding: 20px;
+}
+
+.my-info {
+    background-color: cadetblue;
+    color: #000;
+    text-align: start;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.break-time ul {
+    list-style: none;
+    display: flex;
+    text-align: center;
+    margin-left: -20px;
+
+}
+
+.break-time ul li {
+    margin: 0 10px;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    background-color: #fff;
+    color: grey;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.details {
+    text-align: start;
+}

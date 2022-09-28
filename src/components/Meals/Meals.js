@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import MenuCart from '../Menu/MenuCart';
 import Meal from './Meal';
 import './Meals.css'
 
@@ -19,11 +20,14 @@ const Meals = () => {
 
                 <div className="meals-container">
                     {
-                        meals.map(meal => <Meal meal={meal}></Meal>)
+                        meals.map(meal => <Meal
+                            meal={meal}
+                            key={meal.id}
+                        ></Meal>)
                     }
                 </div>
                 <div className="meals-cart">
-                    <h1>this is cart</h1>
+                    <MenuCart></MenuCart>
                 </div>
             </div>
 
