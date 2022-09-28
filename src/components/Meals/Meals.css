@@ -1,0 +1,29 @@
+.header-text {
+    text-align: center;
+    color: rgb(163, 20, 220);
+}
+
+.sub-text {
+    text-align: start;
+    margin-left: 20px;
+}
+
+
+.main-container {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+.meals-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.main-container .meals-cart {
+    background-color: rgb(161, 92, 189);
+
+
+}
