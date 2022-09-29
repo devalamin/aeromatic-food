@@ -2,7 +2,42 @@ import React, { useEffect, useState } from 'react';
 import { addToDB, getStoredFood } from '../../utility/demoDB';
 import './MenuCart.css'
 
+import Button from 'react-bootstrap/Button';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+import Toast from 'react-bootstrap/Toast';
+
 const MenuCart = (props) => {
+
+    function AutohideExample() {
+        const [show, setShow] = useState(false);
+
+        return (
+            <Row>
+                <Col xs={6}>
+                    <Toast onClose={() => setShow(false)} show={show} delay={3000} autohide>
+                        <Toast.Header>
+                            <img
+                                src="holder.js/20x20?text=%20"
+                                className="rounded me-2"
+                                alt=""
+                            />
+                            <strong className="me-auto"> <h2>Congratulation</h2></strong>
+                            <small></small>
+                        </Toast.Header>
+                        <Toast.Body>You Have Completed Your Food</Toast.Body>
+                    </Toast>
+                </Col>
+                <Col xs={6}>
+                    <Button onClick={() => setShow(true)}>Completed</Button>
+                </Col>
+            </Row>
+        );
+    }
+
+
+
+    // toast
     const { requiredTime } = props;
     let neededTime = 0;
     let quantity = 0;
@@ -48,6 +83,8 @@ const MenuCart = (props) => {
         breakingTime = finalBreakTime.time;
         breakingQuantity = breakingQuantity + finalBreakTime.quantity;
     }
+
+
     return (
         <div className='menu-cart'>
             <div className="my-info">
@@ -70,7 +107,7 @@ const MenuCart = (props) => {
                 <h4>Eating Time: <span>{neededTime}</span></h4>
                 <h4>Break Time: <span>{breakingTime}</span></h4>
             </div>
-            <button>Completed</button>
+            <AutohideExample></AutohideExample>
 
 
 
