@@ -41,8 +41,6 @@ const Meals = () => {
             newTime = [...left, exists]
         }
 
-
-
         setRequiredTime(newTime)
         addToDB(meal.id)
     }

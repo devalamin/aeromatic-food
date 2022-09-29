@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import { addToDB, getStoredFood } from '../../utility/demoDB';
 import './MenuCart.css'
 
 const MenuCart = (props) => {
     const { requiredTime } = props;
-    console.log(requiredTime)
     let neededTime = 0;
     let quantity = 0;
     for (const singleTime of requiredTime) {
@@ -18,14 +18,46 @@ const MenuCart = (props) => {
     }, [])
 
     const [finalBreak, setFinalBreak] = useState([])
+
+    useEffect(() => {
+        const storedBreak = getStoredFood();
+        const savedBreak = [];
+        for (const id in storedBreak) {
+            const addedBreak = breakTime.find(singleBreak => (singleBreak.id) === id);
+            if (addedBreak) {
+                const quantity = storedBreak[id];
+                addedBreak.quantity = quantity;
+                savedBreak.push(addedBreak);
+            }
+        }
+        setFinalBreak(savedBreak);
+    }, [breakTime])
+
+
     const handleBreakTime = (breakTime) => {
+        // let newBreak = 0;
+        // const exists = finalBreak.find(item => item.id === breakTime.id);
+
+        // if (!exists) {
+        //     breakTime.quantity = 1;
+
+        // }
+        // else {
+        //     const rest = finalBreak.filter(item => item.id !== breakTime.id);
+        //     exists.quantity = exists.quantity + 1;
+        //     newBreak = [...rest, exists]
+        // }
         const newBreak = [...finalBreak, breakTime]
         setFinalBreak(newBreak)
-        console.log(finalBreak)
+        addToDB(breakTime.id)
+
     }
+
     let breakingTime = 0;
+    let breakingQuantity = 0;
     for (const finalBreakTime of finalBreak) {
         breakingTime = finalBreakTime.time;
+        breakingQuantity = breakingQuantity + finalBreakTime.quantity;
     }
     return (
         <div className='menu-cart'>

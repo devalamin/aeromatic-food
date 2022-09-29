@@ -27,3 +27,21 @@
 
 
 }
+
+@media screen and (max-width:576px) {
+    .main-container {
+        background-color: red;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .meals-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .main-container .meals-cart {
+        width: 300px;
+    }
+
+
+
+}

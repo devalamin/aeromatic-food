@@ -25,3 +25,12 @@
     padding: 10px 20px;
     cursor: pointer;
 }
+
+@media screen and (max-width:576px) {
+    .meal img {
+        height: 100px;
+        width: 200px;
+        object-fit: cover;
+    }
+
+}
