@@ -15,10 +15,8 @@ const Meals = () => {
     const addToCart = (meal) => {
         const newTime = [...requiredTime, meal];
         setRequiredTime(newTime)
+
     }
-    // console.log(requiredTime)
-
-
     return (
         <div>
             <h1 className='header-text'>Aromatic Food</h1>

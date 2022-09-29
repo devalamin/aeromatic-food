@@ -3,6 +3,7 @@ import './Meal.css'
 
 const Meal = (props) => {
     const { addToCart, meal } = props;
+    // console.log(meal.id)
     const { img, name, detail, age, time } = meal;
 
     return (

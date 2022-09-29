@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './MenuCart.css'
 
 const MenuCart = (props) => {
@@ -7,9 +7,23 @@ const MenuCart = (props) => {
     for (const singleTime of requiredTime) {
         neededTime = neededTime + singleTime.time;
     }
+    const [breakTime, setBreakTime] = useState([])
+    useEffect(() => {
+        fetch('breaks.json')
+            .then(res => res.json())
+            .then(data => setBreakTime(data))
+    }, [])
 
-    const breaks = [20, 30, 50, 40];
-
+    const [finalBreak, setFinalBreak] = useState([])
+    const handleBreakTime = (breakTime) => {
+        const newBreak = [...finalBreak, breakTime]
+        setFinalBreak(newBreak)
+        console.log(finalBreak)
+    }
+    let breakingTime = 0;
+    for (const finalBreakTime of finalBreak) {
+        breakingTime = finalBreakTime.time;
+    }
     return (
         <div className='menu-cart'>
             <div className="my-info">
@@ -21,14 +35,16 @@ const MenuCart = (props) => {
                 <h4>Add A Break</h4>
                 <ul>
                     {
-                        breaks.map(time => <li>{time}</li>)
+                        breakTime.map(singleTime => <li
+                            onClick={() => handleBreakTime(singleTime)}
+                        >{singleTime.time}</li>)
                     }
                 </ul>
             </div>
             <div className="details">
                 <h2>Processing</h2>
                 <h4>Eating Time: <span>{neededTime}</span></h4>
-                <h4>Break Time: <span></span></h4>
+                <h4>Break Time: <span>{breakingTime}</span></h4>
             </div>
             <button>Completed</button>
 
