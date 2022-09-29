@@ -1,8 +1,15 @@
 import React from 'react';
 import './MenuCart.css'
 
-const MenuCart = () => {
+const MenuCart = (props) => {
+    const { requiredTime } = props;
+    let neededTime = 0;
+    for (const singleTime of requiredTime) {
+        neededTime = neededTime + singleTime.time;
+    }
+
     const breaks = [20, 30, 50, 40];
+
     return (
         <div className='menu-cart'>
             <div className="my-info">
@@ -20,8 +27,8 @@ const MenuCart = () => {
             </div>
             <div className="details">
                 <h2>Processing</h2>
-                <h4>Eating Time: </h4>
-                <h4>Break Time: </h4>
+                <h4>Eating Time: <span>{neededTime}</span></h4>
+                <h4>Break Time: <span></span></h4>
             </div>
             <button>Completed</button>
 

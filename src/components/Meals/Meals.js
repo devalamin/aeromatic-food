@@ -11,6 +11,13 @@ const Meals = () => {
             .then(data => setMeals(data))
     }, [])
 
+    const [requiredTime, setRequiredTime] = useState([])
+    const addToCart = (meal) => {
+        const newTime = [...requiredTime, meal];
+        setRequiredTime(newTime)
+    }
+    // console.log(requiredTime)
+
 
     return (
         <div>
@@ -23,11 +30,12 @@ const Meals = () => {
                         meals.map(meal => <Meal
                             meal={meal}
                             key={meal.id}
+                            addToCart={addToCart}
                         ></Meal>)
                     }
                 </div>
                 <div className="meals-cart">
-                    <MenuCart></MenuCart>
+                    <MenuCart requiredTime={requiredTime}></MenuCart>
                 </div>
             </div>
 
