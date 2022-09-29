@@ -1,3 +1,5 @@
+import { faBowlFood, faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import { addToDB, getStoredFood, } from '../../utility/demoDB';
 import MenuCart from '../Menu/MenuCart';
@@ -46,7 +48,8 @@ const Meals = () => {
     }
     return (
         <div>
-            <h1 className='header-text'>Aromatic Food</h1>
+
+            <h1 className='header-text'><FontAwesomeIcon icon={faBowlFood}></FontAwesomeIcon>Aromatic Food</h1>
             <h2 className='sub-text'>Select Your Meals</h2>
             <div className='main-container'>
 
