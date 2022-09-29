@@ -1,6 +1,7 @@
 [
     {
         "id": "63346c2705ae9096334e3c92",
+        "quantity": 0,
         "index": 0,
         "time": 40,
         "age": 35,
@@ -10,6 +11,7 @@
     },
     {
         "id": "63346c2709184e8e05852103",
+        "quantity": 0,
         "index": 1,
         "time": 50,
         "age": 25,
@@ -19,6 +21,7 @@
     },
     {
         "id": "63346c27ce76fe960b4680a1",
+        "quantity": 0,
         "index": 2,
         "time": 30,
         "age": 45,
@@ -28,6 +31,7 @@
     },
     {
         "id": "63346c27c33b91eed8ef4b4a",
+        "quantity": 0,
         "index": 3,
         "time": 20,
         "age": 58,
@@ -37,6 +41,7 @@
     },
     {
         "id": "63346c27f0a11256248186dc",
+        "quantity": 0,
         "index": 4,
         "time": 60,
         "age": 25,
@@ -46,6 +51,7 @@
     },
     {
         "id": "63346c274b3d048e36975073",
+        "quantity": 0,
         "index": 5,
         "time": 80,
         "age": 15,
@@ -55,6 +61,7 @@
     },
     {
         "id": "63346c2741793b7d538bbe15",
+        "quantity": 0,
         "index": 6,
         "time": 40,
         "age": 65,

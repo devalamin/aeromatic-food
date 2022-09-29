@@ -3,9 +3,12 @@ import './MenuCart.css'
 
 const MenuCart = (props) => {
     const { requiredTime } = props;
+    console.log(requiredTime)
     let neededTime = 0;
+    let quantity = 0;
     for (const singleTime of requiredTime) {
-        neededTime = neededTime + singleTime.time;
+        quantity = quantity + singleTime.quantity
+        neededTime = neededTime + singleTime.time * singleTime.quantity;
     }
     const [breakTime, setBreakTime] = useState([])
     useEffect(() => {
