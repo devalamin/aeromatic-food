@@ -1,7 +1,11 @@
 .header-text {
     text-align: center;
     color: rgb(163, 20, 220);
+    word-spacing: 10px;
+    letter-spacing: 3px;
 }
+
+
 
 .sub-text {
     text-align: start;

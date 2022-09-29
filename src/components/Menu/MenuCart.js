@@ -35,18 +35,7 @@ const MenuCart = (props) => {
 
 
     const handleBreakTime = (breakTime) => {
-        // let newBreak = 0;
-        // const exists = finalBreak.find(item => item.id === breakTime.id);
 
-        // if (!exists) {
-        //     breakTime.quantity = 1;
-
-        // }
-        // else {
-        //     const rest = finalBreak.filter(item => item.id !== breakTime.id);
-        //     exists.quantity = exists.quantity + 1;
-        //     newBreak = [...rest, exists]
-        // }
         const newBreak = [...finalBreak, breakTime]
         setFinalBreak(newBreak)
         addToDB(breakTime.id)
