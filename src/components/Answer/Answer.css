@@ -1,0 +1,22 @@
+.mainDiv {
+    margin: 50px;
+    padding: 20px;
+
+}
+
+.mainDiv .one,
+.two,
+.three {
+    border: 1px solid lightgreen;
+    margin: 20px;
+    padding: 20px;
+    text-align: start;
+
+}
+
+@media screen and (max-width:576px) {
+    .mainDiv {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

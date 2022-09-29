@@ -35,8 +35,6 @@ const MenuCart = (props) => {
         );
     }
 
-
-
     // toast
     const { requiredTime } = props;
     let neededTime = 0;
